@@ -26,6 +26,7 @@ sub-all sub-install sub-clean sub-distclean:
 .PHONY: sub-all sub-clean sub-install sub-distclean
 
 python-all: config.mak
+	$(PYTHON) setup_pkgloader.py build
 	$(PYTHON) setup_skytools.py build
 
 clean: sub-clean
